@@ -1,11 +1,11 @@
 // aws dynamodb scan --table-name 'AppleTable' > exports.json
-const AWS = require('/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/my-nodejs/lib/node_modules/aws-sdk');
+const AWS = require('aws-sdk');
 AWS.config.update({accessKeyId:process.argv[2], secretAccessKey: process.argv[3], region: "us-east-1"});
 const fs = require('fs')
 const { table } = require('console');
 var s3 = new AWS.S3();
 // 
-json = fs.readFileSync(path = 'cleanedexports.json', encoding = 'utf-8')
+json = fs.readFileSync(path = './cleanedexports.json', encoding = 'utf-8')
 
 var getUrl = process.argv[4]
 var startDate = process.argv[5]
@@ -45,7 +45,7 @@ fstr = JSON.stringify(fields)
 var buf = Buffer.from(fstr);
 
 var data = {
-    Bucket: 'desturls',
+    Bucket: 'myuploads3',
     Key: 'exportedData.json',
     Body: buf,
     ContentEncoding: 'base64',
