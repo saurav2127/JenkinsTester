@@ -1,0 +1,297 @@
+{
+    "Items": [
+        {
+            "acc": {
+                "S": "0.92"
+            },
+            "date": {
+                "S": "2023-07-12"
+            },
+            "fcp": {
+                "S": "0.86"
+            },
+            "si": {
+                "S": "0.98"
+            },
+            "tbt": {
+                "S": "0.46"
+            },
+            "cls": {
+                "S": "0.91"
+            },
+            "lcp": {
+                "S": "0.86"
+            },
+            "url": {
+                "S": "http://renaissance-hotels.marriott.com/"
+            },
+            "per": {
+                "S": "0.76"
+            }
+        },
+        {
+            "acc": {
+                "S": "0.86"
+            },
+            "date": {
+                "S": "2023-07-12"
+            },
+            "fcp": {
+                "S": "0.29"
+            },
+            "si": {
+                "S": "0.86"
+            },
+            "tbt": {
+                "S": "0.77"
+            },
+            "cls": {
+                "S": "1"
+            },
+            "lcp": {
+                "S": "0.57"
+            },
+            "url": {
+                "S": "https://homes-and-villas.marriott.com/en/offers/2xjul23"
+            },
+            "per": {
+                "S": "0.74"
+            }
+        },
+        {
+            "acc": {
+                "S": "0.85"
+            },
+            "date": {
+                "S": "2023-07-13"
+            },
+            "fcp": {
+                "S": "0.99"
+            },
+            "si": {
+                "S": "0.98"
+            },
+            "tbt": {
+                "S": "1"
+            },
+            "cls": {
+                "S": "0.01"
+            },
+            "lcp": {
+                "S": "0.9"
+            },
+            "url": {
+                "S": "http://springhillsuites.marriott.com/"
+            },
+            "per": {
+                "S": "0.72"
+            }
+        },
+        {
+            "acc": {
+                "S": "0.98"
+            },
+            "date": {
+                "S": "2023-07-12"
+            },
+            "fcp": {
+                "S": "0.5"
+            },
+            "si": {
+                "S": "0.65"
+            },
+            "tbt": {
+                "S": "0.48"
+            },
+            "cls": {
+                "S": "0.03"
+            },
+            "lcp": {
+                "S": "0.79"
+            },
+            "url": {
+                "S": "https://homes-and-villas.marriott.com/en/about-us-faq"
+            },
+            "per": {
+                "S": "0.46"
+            }
+        },
+        {
+            "acc": {
+                "S": "0.79"
+            },
+            "date": {
+                "S": "2023-07-12"
+            },
+            "fcp": {
+                "S": "0.23"
+            },
+            "si": {
+                "S": "0.66"
+            },
+            "tbt": {
+                "S": "0.13"
+            },
+            "cls": {
+                "S": "1"
+            },
+            "lcp": {
+                "S": "0.27"
+            },
+            "url": {
+                "S": "https://homes-and-villas.marriott.com/en/vacation-rentals"
+            },
+            "per": {
+                "S": "0.45"
+            }
+        },
+        {
+            "acc": {
+                "S": "0.84"
+            },
+            "date": {
+                "S": "2023-07-12"
+            },
+            "fcp": {
+                "S": "1"
+            },
+            "si": {
+                "S": "0.2"
+            },
+            "tbt": {
+                "S": "0.07"
+            },
+            "cls": {
+                "S": "0.65"
+            },
+            "lcp": {
+                "S": "1"
+            },
+            "url": {
+                "S": "http://www.ritzcarlton.com/"
+            },
+            "per": {
+                "S": "0.55"
+            }
+        },
+        {
+            "acc": {
+                "S": "0.73"
+            },
+            "date": {
+                "S": "2023-07-13"
+            },
+            "fcp": {
+                "S": "1"
+            },
+            "si": {
+                "S": "1"
+            },
+            "tbt": {
+                "S": "0.83"
+            },
+            "cls": {
+                "S": "0.24"
+            },
+            "lcp": {
+                "S": "1"
+            },
+            "url": {
+                "S": "https://westin.marriott.com/"
+            },
+            "per": {
+                "S": "0.76"
+            }
+        },
+        {
+            "acc": {
+                "S": "0.78"
+            },
+            "date": {
+                "S": "2023-07-12"
+            },
+            "fcp": {
+                "S": "0.37"
+            },
+            "si": {
+                "S": "0.9"
+            },
+            "tbt": {
+                "S": "0.68"
+            },
+            "cls": {
+                "S": "1"
+            },
+            "lcp": {
+                "S": "0.67"
+            },
+            "url": {
+                "S": "https://homes-and-villas.marriott.com/en/lookup-reservations?rareid=02613nuli"
+            },
+            "per": {
+                "S": "0.75"
+            }
+        },
+        {
+            "acc": {
+                "S": "0.86"
+            },
+            "date": {
+                "S": "2023-07-12"
+            },
+            "fcp": {
+                "S": "0.27"
+            },
+            "si": {
+                "S": "0.73"
+            },
+            "tbt": {
+                "S": "0.91"
+            },
+            "cls": {
+                "S": "1"
+            },
+            "lcp": {
+                "S": "0.24"
+            },
+            "url": {
+                "S": "https://homes-and-villas.marriott.com/en/offers/2XJUL23"
+            },
+            "per": {
+                "S": "0.68"
+            }
+        },
+        {
+            "acc": {
+                "S": "0.82"
+            },
+            "date": {
+                "S": "2023-07-13"
+            },
+            "fcp": {
+                "S": "0.95"
+            },
+            "si": {
+                "S": "1"
+            },
+            "tbt": {
+                "S": "0.81"
+            },
+            "cls": {
+                "S": "0.18"
+            },
+            "lcp": {
+                "S": "0.99"
+            },
+            "url": {
+                "S": "https://le-meridien.marriott.com/"
+            },
+            "per": {
+                "S": "0.73"
+            }
+        }
+    ],
+    "Count": 10,
+    "ScannedCount": 10,
+    "ConsumedCapacity": null
+}
