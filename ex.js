@@ -1,13 +1,15 @@
 // aws dynamodb scan --table-name 'AppleTable' > exports.json
-
+const AWS = require('/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/my-nodejs/lib/node_modules/aws-sdk');
+AWS.config.update({accessKeyId:process.argv[2], secretAccessKey: process.argv[3], region: "us-east-1"});
 const fs = require('fs')
 const { table } = require('console');
+var s3 = new AWS.S3();
 // 
 json = fs.readFileSync(path = 'cleanedexports.json', encoding = 'utf-8')
 
-var getUrl = process.argv[2]
-var startDate = process.argv[3]
-var endDate = process.argv[4]
+var getUrl = process.argv[4]
+var startDate = process.argv[5]
+var endDate = process.argv[6]
 
 const tableData = JSON.parse(json)
 fields = {}
@@ -40,20 +42,40 @@ fields["cls"] = perList
 //console.log(fields)
 
 fstr = JSON.stringify(fields)
-jfile = JSON.parse(fstr)
-//console.log(jfile)
-fs.writeFile("./exportedData.json", fstr, (error) => {
-  // throwing the error
-  // in case of a writing problem
-  if (error) {
-    // logging the error
-    console.error(error);
+var buf = Buffer.from(fstr);
 
-    throw error;
-  }
+var data = {
+    Bucket: 'iuploadS3',
+    Key: 'exportedData.json',
+    Body: buf,
+    ContentEncoding: 'base64',
+    ContentType: 'application/json',
+    ACL: 'public-read'
+};
 
-  console.log("exportedData.json written correctly");
+s3.upload(data, function (err, data) {
+    if (err) {
+        console.log(err);
+        console.log('Error uploading data: ', data);
+    } else {
+        console.log('succesfully uploaded!!!');
+    }
 });
+
+//console.log(jfile)
+// fs.writeFile("./exportedData.json", fstr, (error) => {
+//   // throwing the error
+//   // in case of a writing problem
+//   if (error) {
+//     // logging the error
+//     console.error(error);
+
+//     throw error;
+//   }
+
+//   console.log("exportedData.json written correctly");
+// });
+
 // const numItems = tableData.Count
 
 // const initialWrite = '['
