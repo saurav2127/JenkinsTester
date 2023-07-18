@@ -45,7 +45,7 @@ fstr = JSON.stringify(fields)
 var buf = Buffer.from(fstr);
 
 var data = {
-    Bucket: 'uploads3',
+    Bucket: 'myuploads3',
     Key: 'exportedData.json',
     Body: buf,
     ContentEncoding: 'base64',
