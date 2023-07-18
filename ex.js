@@ -5,11 +5,29 @@ const fs = require('fs')
 const { table } = require('console');
 var s3 = new AWS.S3();
 // 
+
 json = fs.readFileSync(path = './cleanedexports.json', encoding = 'utf-8')
 
-var getUrl = process.argv[4]
-var startDate = process.argv[5]
-var endDate = process.argv[6]
+var params = {Bucket: 'myuploads3', Key: 'data.txt'};
+
+var getUrl;
+var startDate;
+var endDate;
+
+s3.getObject(params, function(err, data) {
+
+  if(err) console.log(err, err.stack);
+  else{
+
+    let text = data.Body.toString();
+    const contents = text.split(',')
+    getUrl = contents[0]
+    startDate = contents[1]
+    endDate = contents[2]
+    
+  } 
+});
+
 
 const tableData = JSON.parse(json)
 fields = {}
@@ -21,7 +39,7 @@ var siList = []
 var tbtList = []
 var clsList = []
 for ( let index = 0; index < tableData["Items"].length ; index++) {
-    if(tableData["Items"][index]["date"].S>startDate && tableData["Items"][index]["date"].S<endDate && 
+    if(tableData["Items"][index]["date"].S>=startDate && tableData["Items"][index]["date"].S<=endDate && 
     tableData["Items"][index]["url"].S==getUrl){
     perList.push([tableData["Items"][index]["per"].S, tableData["Items"][index]["date"].S])
     accList.push([tableData["Items"][index]["acc"].S, tableData["Items"][index]["date"].S])
@@ -61,6 +79,8 @@ s3.upload(data, function (err, data) {
         console.log('succesfully uploaded!!!');
     }
 });
+
+
 
 //console.log(jfile)
 // fs.writeFile("./exportedData.json", fstr, (error) => {
